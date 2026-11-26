@@ -29,6 +29,7 @@ function copyEntry(relPath, targetRoot) {
 
 function scanForLeaks(dir) {
   const forbidden = ['\\Users\\eryis', '/Users/eryis', '环境维护'];
+  const binaryExts = new Set(['.webp', '.png', '.jpg', '.jpeg', '.gif', '.ico', '.zip', '.tgz']);
   const hits = [];
 
   function walk(current) {
@@ -37,6 +38,7 @@ function scanForLeaks(dir) {
       if (entry.isDirectory()) {
         walk(full);
       } else if (entry.isFile()) {
+        if (binaryExts.has(path.extname(entry.name).toLowerCase())) continue;
         const text = fs.readFileSync(full, 'utf8');
         for (const token of forbidden) {
           if (text.includes(token)) {

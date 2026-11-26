@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/readme-icon.svg" width="112" height="112" alt="Agent-EnvShare 项目图标"><br>
+  <img src="assets/readme-icon-rounded.webp" width="112" height="112" alt="Agent-EnvShare 项目图标"><br>
   <img src="assets/readme-wordmark.svg" width="360" alt="Agent-EnvShare">
 </div>
 <p align="center">简体中文 | <a href="README.en.md">English</a></p>
