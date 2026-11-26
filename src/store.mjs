@@ -28,7 +28,20 @@ export function atomicWriteFile(filePath, content) {
   ensureDir(path.dirname(filePath));
   const tmpPath = `${filePath}.tmp.${process.pid}.${Date.now()}`;
   fs.writeFileSync(tmpPath, content, 'utf8');
-  fs.renameSync(tmpPath, filePath);
+  try {
+    fs.renameSync(tmpPath, filePath);
+  } catch (err) {
+    try {
+      fs.unlinkSync(tmpPath);
+    } catch {
+      // ignore cleanup error
+    }
+    if (process.platform === 'win32' && ['EPERM', 'EBUSY', 'EACCES'].includes(err.code)) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return;
+    }
+    throw err;
+  }
 }
 
 export function withRegistryLock(fn, timeoutMs = 5000) {
