@@ -1,0 +1,32 @@
+{
+  "id": "comfyui",
+  "name": "ComfyUI Image Generation",
+  "category": "ai-image",
+  "scope": "machine-singleton",
+  "status": "active",
+  "summary": "Shared local ComfyUI image generation environment and API service",
+  "root_path": "/path/to/SharedEnvs/services/comfyui",
+  "executables": {
+    "python": "/path/to/SharedEnvs/services/comfyui/venv/bin/python"
+  },
+  "env_vars": {
+    "COMFYUI_DIR": "/path/to/SharedEnvs/services/comfyui"
+  },
+  "shared_resources": [
+    "/path/to/SharedEnvs/models/comfyui"
+  ],
+  "service": {
+    "start_command": "",
+    "url": "http://127.0.0.1:8188",
+    "port": 8188
+  },
+  "how_to_use": [
+    "Check http://127.0.0.1:8188 first; reuse this installation instead of cloning ComfyUI in project repos"
+  ],
+  "health_check": {
+    "path": "/path/to/SharedEnvs/services/comfyui/main.py",
+    "command": ""
+  },
+  "tags": ["comfyui", "image-gen", "sd", "flux"],
+  "notes": "Record CUDA version, custom node caveats, or launch flags here"
+}

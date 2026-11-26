@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "default_shared_root": "",
+  "existing_env_policy": "register-in-place",
+  "categories": {
+    "dev": {
+      "label": "Base Dev Toolchains & Runtimes",
+      "subdir": "runtimes",
+      "description": "Shared runtimes, CUDA, build toolchains, and global package caches",
+      "examples": ["CUDA Toolkit", "Conda / uv shared envs", "JDK / Go / Rust / Build Tools"]
+    },
+    "ai-image": {
+      "label": "AI Image & Video Generation",
+      "subdir": "services",
+      "description": "ComfyUI, SD WebUI, Flux/ControlNet inference environments and shared models",
+      "examples": ["ComfyUI", "SD WebUI", "Forge"]
+    },
+    "ai-audio": {
+      "label": "Speech-to-Text (STT) & TTS",
+      "subdir": "services",
+      "description": "Whisper, Faster-Whisper, FunASR, SenseVoice, CosyVoice, and TTS services",
+      "examples": ["Faster-Whisper", "FunASR", "SenseVoice", "CosyVoice"]
+    },
+    "ai-llm": {
+      "label": "Local LLM Inference",
+      "subdir": "services",
+      "description": "Ollama, vLLM, llama.cpp, LM Studio, and shared LLM runtimes",
+      "examples": ["Ollama", "llama.cpp", "vLLM"]
+    },
+    "reverse": {
+      "label": "Reverse Engineering Toolchains",
+      "subdir": "tools",
+      "description": "Frida, IDA, Ghidra, JADX, Apktool, x64dbg, Mitmproxy, and dedicated RE environments",
+      "examples": ["Frida", "JADX / Apktool", "IDA / Ghidra", "Mitmproxy"]
+    },
+    "android": {
+      "label": "Android Dev & Debugging",
+      "subdir": "tools",
+      "description": "Android SDK, NDK, Platform-Tools (adb/fastboot), Gradle cache, emulators, Scrcpy",
+      "examples": ["Android SDK", "Android NDK", "ADB / Scrcpy", "Android Emulator"]
+    },
+    "shared-models": {
+      "label": "Shared Model Weights & Large Caches",
+      "subdir": "models",
+      "description": "Cross-tool model weights and large shared caches to prevent duplicate downloads",
+      "examples": ["HuggingFace Hub Cache", "ModelScope Cache", "ComfyUI Models"]
+    },
+    "other": {
+      "label": "Other Machine-Singleton Environments",
+      "subdir": "other",
+      "description": "Other heavy or machine-wide shared tools and local services",
+      "examples": ["Shared Playwright Browsers", "Local Database Service", "Local Proxy"]
+    }
+  },
+  "shared_criteria": [
+    "Large footprint (> 500 MB) or contains model weights, SDKs, or heavy system binaries",
+    "Depends on GPU / CUDA / drivers or runs as a local port service (ComfyUI, STT, TTS, Ollama)",
+    "Reusable system-level toolchain shared across projects (Android SDK/NDK, reverse engineering kits, shared runtimes)",
+    "Machine-singleton environment that should never be reinstalled inside each project workspace"
+  ],
+  "local_criteria": [
+    "Lightweight per-project dependencies (normal project .venv, node_modules)",
+    "Disposable temporary experiments or one-off test folders"
+  ],
+  "forbidden_path_segments": [
+    "temp",
+    "tmp",
+    "desktop",
+    "downloads"
+  ],
+  "naming_rule": "Lowercase letters, digits, and hyphens (kebab-case), e.g. comfyui, stt-whisper, android-sdk, reverse-frida"
+}

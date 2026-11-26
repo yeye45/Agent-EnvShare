@@ -1,0 +1,14 @@
+# Local machine registry data (keep personal machine paths out of git/releases)
+registry/
+
+# Build & release artifacts
+dist/
+*.tgz
+*.zip
+
+# OS & editor junk
+.DS_Store
+Thumbs.db
+*.tmp.*
+*.envreg.bak
+node_modules/

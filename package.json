@@ -1,0 +1,48 @@
+{
+  "name": "agent-envshare",
+  "version": "1.0.0",
+  "description": "Cross-agent machine shared environment registry CLI & Agent Skill (Antigravity, Codex, dsh, Claude Code, Cursor, etc.)",
+  "author": "yeye45",
+  "license": "MIT",
+  "homepage": "https://github.com/yeye45/Agent-EnvShare#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeye45/Agent-EnvShare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yeye45/Agent-EnvShare/issues"
+  },
+  "type": "module",
+  "bin": {
+    "envreg": "./bin/envreg.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "skill/",
+    "templates/",
+    "docs/",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "release:build": "node scripts/build-release.mjs"
+  },
+  "keywords": [
+    "ai-agent",
+    "agent-skills",
+    "codex",
+    "antigravity",
+    "deepseek-harness",
+    "dsh",
+    "claude-code",
+    "cursor",
+    "environment-registry",
+    "cli"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
