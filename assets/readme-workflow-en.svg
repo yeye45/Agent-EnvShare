@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 190" width="920" height="190" role="img" aria-label="Agent-EnvShare workflow: inspect, plan, register, and sync across agents">
+  <defs>
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#64748B"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="920" height="190" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Step 1 -->
+  <rect x="24" y="26" width="196" height="138" rx="12" fill="url(#cardBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="38" y="40" width="28" height="22" rx="6" fill="#0EA5E9"/>
+  <text x="52" y="55" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">01</text>
+  <text x="74" y="56" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Inspect &amp; Reuse</text>
+  <text x="38" y="84" font-family="Consolas, monospace" font-size="12" fill="#0369A1">envreg list / get</text>
+  <text x="38" y="108" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">Reuse existing ComfyUI,</text>
+  <text x="38" y="126" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">STT, RE, and Android</text>
+  <text x="38" y="144" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">setups before installing</text>
+
+  <line x1="224" y1="95" x2="246" y2="95" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2 -->
+  <rect x="250" y="26" width="196" height="138" rx="12" fill="url(#cardBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="264" y="40" width="28" height="22" rx="6" fill="#0284C7"/>
+  <text x="278" y="55" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">02</text>
+  <text x="300" y="56" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Plan &amp; Dedupe</text>
+  <text x="264" y="84" font-family="Consolas, monospace" font-size="12" fill="#0369A1">envreg plan</text>
+  <text x="264" y="108" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">Detect same-category</text>
+  <text x="264" y="126" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">duplicates and return the</text>
+  <text x="264" y="144" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">standard shared path</text>
+
+  <line x1="450" y1="95" x2="472" y2="95" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3 -->
+  <rect x="476" y="26" width="196" height="138" rx="12" fill="url(#cardBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="490" y="40" width="28" height="22" rx="6" fill="#10B981"/>
+  <text x="504" y="55" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">03</text>
+  <text x="526" y="56" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Register &amp; Verify</text>
+  <text x="490" y="84" font-family="Consolas, monospace" font-size="12" fill="#047857">envreg register</text>
+  <text x="490" y="108" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">Validate paths and bins,</text>
+  <text x="490" y="126" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">write atomic JSON SSOT,</text>
+  <text x="490" y="144" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">and refresh INDEX.md</text>
+
+  <line x1="676" y1="95" x2="698" y2="95" stroke="#64748B" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4 -->
+  <rect x="702" y="26" width="194" height="138" rx="12" fill="url(#cardBg)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <rect x="716" y="40" width="28" height="22" rx="6" fill="#16A34A"/>
+  <text x="730" y="55" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">04</text>
+  <text x="752" y="56" font-family="Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Sync All Agents</text>
+  <text x="716" y="84" font-family="Consolas, monospace" font-size="12" fill="#047857">envreg sync / doctor</text>
+  <text x="716" y="108" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">Update Antigravity, Codex,</text>
+  <text x="716" y="126" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">dsh, Claude &amp; Cursor rules</text>
+  <text x="716" y="144" font-family="Segoe UI, sans-serif" font-size="12" fill="#475569">and run health checks</text>
+</svg>
